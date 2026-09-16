@@ -380,11 +380,18 @@ footer h5{
   .nav-links{display:none}
   .nav-toggle{display:block}
   .hero{padding:48px 0 20px}
-  .hero-grid{flex-direction:column;align-items:stretch;gap:52px}
+  /* mobile: foto in alto, titolo sotto — la card del titolo sale a sovrapporsi un po' sulla foto */
+  .hero-grid{flex-direction:column-reverse;align-items:stretch;gap:0}
   .hero-copy,.hero-media{width:100%}
-  .hero-media{max-width:460px}
-  .badge{width:124px;height:124px;left:auto;right:-14px;bottom:-24px}
-  .badge .b-top{font-size:1.5rem}
+  .hero-media{max-width:none}
+  .hero-copy{
+    position:relative;z-index:2;margin-top:-46px;
+    background:var(--bg);border-radius:26px 26px 0 0;
+    padding:32px 4px 0;box-shadow:0 -18px 30px -24px rgba(18,18,18,.2);
+  }
+  .badge{width:100px;height:100px;left:16px;right:auto;top:16px;bottom:auto}
+  .badge .b-top{font-size:1.3rem}
+  .badge .b-sub{font-size:.42rem}
   .facts{grid-template-columns:repeat(2,1fr)}
   .fact:nth-child(2){border-right:0}
   .fact:nth-child(1),.fact:nth-child(2){border-bottom:1px solid var(--line)}
