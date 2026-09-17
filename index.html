@@ -379,6 +379,11 @@ footer h5{
 @media(max-width:900px){
   .nav-links{display:none}
   .nav-toggle{display:block}
+  /* mobile: barra top ridotta al solo logo, centrato, senza CTA */
+  .nav-inner{position:relative;justify-content:flex-end}
+  .nav-inner>.logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+  .nav-inner>.logo .lg-name{display:none}
+  .nav-inner>.nav-cta{display:none}
   .hero{padding:48px 0 20px}
   /* mobile: foto in alto, titolo sotto — la card del titolo sale a sovrapporsi un po' sulla foto */
   .hero-grid{flex-direction:column-reverse;align-items:stretch;gap:0}
